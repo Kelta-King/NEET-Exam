@@ -19,17 +19,17 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right kel-hover" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round w3-right"><i class="fa fa-rupee"></i> Donate</a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round"><i class="fa fa-th"></i> Results</a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round w3-right"><i class="fa fa-envelope"></i> Contact</a>
-    <a href="" class="w3-bar-item w3-button w3-hide-small kel-hover w3-round w3-right w3-white w3-hover-theme-dark"><i class="fa fa-sign-in"></i> Log in</a>
+    <a href="donate" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round w3-right"><i class="fa fa-rupee"></i> Donate</a>
+    <a href="results" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round"><i class="fa fa-th"></i> Results</a>
+    <a href="contact" class="w3-bar-item w3-button w3-hide-small kel-hover w3-hover-theme-dark w3-round w3-right"><i class="fa fa-envelope"></i> Contact</a>
+    <a href="login" class="w3-bar-item w3-button w3-hide-small kel-hover w3-round w3-right w3-white w3-hover-theme-dark"><i class="fa fa-sign-in"></i> Log in</a>
     </div>
     
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-animate-top">
-    <a href="" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-rupee"></i> Donate</a>
-    <a href="" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-th"></i> Results</a>
-    <a href="" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-envelope"></i> Contact</a>
-    <a href="" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-sign-in"></i> Log in</a>
+    <a href="donate" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-rupee"></i> Donate</a>
+    <a href="results" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-th"></i> Results</a>
+    <a href="contact" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-envelope"></i> Contact</a>
+    <a href="login" class="w3-bar-item w3-button w3-theme-l1 w3-hover-theme-dark kel-hover" onclick="toggleFunction()"><i class="fa fa-sign-in"></i> Log in</a>
     
   </div>
 </div>
@@ -37,14 +37,18 @@
 
 <div class="w3-padding-64 w3-theme-l1 bgimg">
     <center>
+	<h1 class="w3-xlarge">
+	    <b>FREE <span class="w3-theme-dark">NEET</span> PRACTICE TEST</b>
+	</h1>
 	<div class="w3-content w3-margin w3-card w3-center" style="max-width:400px">
+	
 	<div class="w3-card w3-hover-shadow" style="margin-top:20px;">
 	<div class="w3-light-gray w3-container w3-center w3-animate-fade" style="z-index:2;">
 		<div class="w3-padding-16">
 			
-		<div class="w3-xlarge w3-bold w3-margin-top">Register and Begin</div>
-		<div class="w3-small w3-center" style="padding-top:16px;">
-		    After filling this form, you will recieve an email containing the link of exams and your login details.
+		<div class="w3-xlarge w3-bold w3-margin-top"><b>Register</b></div>
+		<div class="w3-center" style="padding-top:16px;">
+		    Fill the following registration form and recieve login details in email. Answer the test in between 6-8 sept and recieve results on 9th Sept.
 		</div>
 		<form class="w3-container w3-center w3-margin" id="login">
 		<div class="w3-margin-bottom w3-text-red" >
@@ -62,12 +66,14 @@
 				<input type="number" class="w3-padding w3-round-xxlarge w3-border w3-hover-border-black" name="contno" placeholder="Mobile number" style="margin:0;width:90%;" required><br>
 			</div>
 			<div class="w3-section">
-				<input type="text" class="w3-padding w3-round-xxlarge w3-border w3-hover-border-black" name="pass1" placeholder="Password" style="margin:0;width:90%;" required><br>
+			    <select class="w3-padding w3-round-xxlarge w3-border w3-hover-border-black" style="margin:0;width:90%;" required>
+			        <option>Gender</option>
+			        <option>Male</option>
+			        <option>Female</option>
+			    </select>
 			</div>
-			<div class="w3-section">
-				<input type="password" class="w3-padding w3-round-xxlarge w3-border w3-hover-border-black" name="pass2" placeholder="Password again" style="margin:0;width:90%;" required>
-			</div>
-			<a href="" class="kel-hover-2"><u>Already joined?</u></a>
+			
+			<a href="login" class="kel-hover-2"><u>Already joined?</u></a>
 			<div class="w3-section">
 				<button type="button" class="kel-button w3-black w3-round w3-padding w3-border-black w3-black" onclick="login()">LogIn</button>
 			</div>
@@ -80,5 +86,5 @@
 	</center>
 </div>
 <script src="JS/page.js"></script>
-</body>
+	</body>
 </html>
