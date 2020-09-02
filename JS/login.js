@@ -93,47 +93,29 @@ class Check{
 }
 
 
-let contact = () => {
+let login = () => {
 		
 		let formS = document.getElementById('register');
 		
 		let check_data = new Check();
 		let error = document.getElementById('error');
-		let name = formS.name.value;
-		let email = formS.email.value;
-		let problem = formS.problem.value;
-		let msg = formS.msg.value;
+		let rollno = formS.rollno.value;
+		let pass = formS.pass.value;
 	
-		if(name == "" || email == "" || problem == "" || msg == ""){
+		if(rollno == "" || pass == ""){
 			error.innerHTML = "Please enter every details";
 			return false;
 		}
 		
 		try{
-		    
-		    if(!check_data.emailCheck(email, error)){
-		        return false;
-		    }
 		
-			if(check_data.check(name)){
+			if(check_data.check(rollno)){
 				alert("Please enter valid roll no");
 				error.innerHTML = "Please enter valid roll no";
 				return false;
 			}
 			
-			if(check_data.check(email)){
-				alert("Please enter valid password");
-				error.innerHTML = "Please enter valid password";
-				return false;
-			}
-			
-			if(check_data.check(problem)){
-				alert("Please enter valid password");
-				error.innerHTML = "Please enter valid password";
-				return false;
-			}
-			
-			if(check_data.check(msg)){
+			if(check_data.check(pass)){
 				alert("Please enter valid password");
 				error.innerHTML = "Please enter valid password";
 				return false;
@@ -143,11 +125,10 @@ let contact = () => {
 		catch(err){
 			alert("There is a problem: "+err);
 			err.innerHTML = "There is a problem: "+err;
-			return false;
+			return;
 		}
 		
-		
-		let str = "name="+name+"&email="+email+"&problem="+problem+"&msg="+msg;
+		let str = "rollno="+rollno+"&pass="+pass;
     	let xhttp = new XMLHttpRequest();
     	let loader = document.getElementById('loader');
     		xhttp.onreadystatechange = function() {
@@ -155,11 +136,42 @@ let contact = () => {
     			if(this.readyState == 4 && this.status == 200){
     				error.innerHTML = this.responseText;
     				loader.style.display = "none";
-    				
+    				if(this.responseText == ""){
+    				    
+    				    formS.action = "loginStudent";
+    					formS.method = "post";
+    					formS.submit();
+    					
+    				}
     			}
 		    }
-		xhttp.open("POST", "Check/contact", true);
+		xhttp.open("POST", "Check/login", true);
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhttp.send(str);
 	
 	}
+	
+	
+let see = () => {
+    
+    
+    let eye = document.getElementById("eye");
+    let box = document.getElementById("pass");
+    
+    if(eye.className == "fa fa-eye"){
+        
+        eye.className = "fa fa-eye-slash";
+        eye.title = "hide";
+        box.type = "text";
+        
+    }
+    else{
+        
+        eye.className = "fa fa-eye";
+        eye.title = "watch";
+        box.type = "password";
+        
+    }
+    
+    
+}	
