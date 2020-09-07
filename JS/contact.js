@@ -155,7 +155,9 @@ let contact = () => {
     			if(this.readyState == 4 && this.status == 200){
     				error.innerHTML = this.responseText;
     				loader.style.display = "none";
-    				
+    				formS.name.value = "";
+		            formS.email.value = "";
+		            formS.msg.value = ""; 
     			}
 		    }
 		xhttp.open("POST", "Check/contact", true);
