@@ -16,6 +16,7 @@
 	
 ?>
 
+<script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class="w3-main" style="margin-left:300px">
 <div class="w3-blue w3-bar w3-padding">
 <a href="https://keltaking.co/Exams/Ads/Min/home" class="kel-hover"><div class="w3-left w3-bar-item w3-white w3-large w3-hover-green w3-round kel-hover">Home</div></a>
@@ -104,11 +105,14 @@
         </div>
     </form>
 </div>
+
 <div class="w3-center">
     <button class="w3-button w3-blue w3-hover-green kel-hover" onclick="addQuestion()">
         <i class="fa fa-plus"></i> Add question
     </button>
 </div>
+</div>
+
 </div>
 
 
@@ -162,6 +166,68 @@ let addQuestion = () => {
 			}
 		}
 	xhttp.open("POST", "addquestion", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(str);
+	
+}
+    
+let preview = () => {
+	
+	let q_no = document.getElementById('no').value;
+	let q_data_e = document.getElementById('question').value;
+	let q_op1_e = document.getElementById('op1').value;
+	let q_op2_e = document.getElementById('op2').value;
+	let q_op3_e = document.getElementById('op3').value;
+	let q_op4_e = document.getElementById('op4').value;
+	let q_ans_e = document.getElementById('ans').value;
+	let q_hint_e = document.getElementById('hint').value;
+	let q_data_g = document.getElementById('question_g').value;
+	let q_op1_g = document.getElementById('op1_g').value;
+	let q_op2_g = document.getElementById('op2_g').value;
+	let q_op3_g = document.getElementById('op3_g').value;
+	let q_op4_g = document.getElementById('op4_g').value;
+	let q_ans_g = document.getElementById('ans_g').value;
+	let q_hint_g = document.getElementById('hint_g').value;
+	
+	if(q_no=="" || q_data_e=="" || q_op1_e=="" || q_op2_e=="" || q_op3_e=="" || q_op4_e=="" || q_ans_e=="" || q_hint_e==""){
+	    alert("Fill all details");
+	    return;
+	}
+	
+	if(q_no=="" || q_data_g=="" || q_op1_g=="" || q_op2_g=="" || q_op3_g=="" || q_op4_g=="" || q_ans_g=="" || q_hint_g==""){
+	    alert("Fill all details");
+	    return;
+	}
+	
+	let str = "q_no="+q_no+"&q_data_e="+q_data_e+"&q_op1_e="+q_op1_e+"&q_op2_e="+q_op2_e+"&q_op3_e="+q_op3_e+"&q_op4_e="+q_op4_e+"&q_ans_e="+q_ans_e+"&q_hint_e="+q_hint_e+"&q_data_g="+q_data_g+"&q_op1_g="+q_op1_g+"&q_op2_g="+q_op2_g+"&q_op3_g="+q_op3_g+"&q_op4_g="+q_op4_g+"&q_ans_g="+q_ans_g+"&q_hint_g="+q_hint_g+"&q_type='Phy'";
+	let xhttp = new XMLHttpRequest();
+	let loader = document.getElementById('loader-add');
+		xhttp.onreadystatechange = function() {
+			loader.style.display = "block";
+			if(this.readyState == 4 && this.status == 200){
+				loader.style.display = "none";
+				if(this.responseText.length > 30){
+					
+					let dt = this.responseText.split("#");
+				    document.getElementById('question_en').innerHTML = "<img src='https://www.w3schools.com/howto/img_avatar.png'>";
+					document.getElementById('op1e').innerHTML = dt[1];
+					document.getElementById('op2e').innerHTML = dt[2];
+					document.getElementById('op3e').innerHTML = dt[3];
+					document.getElementById('op4e').innerHTML = dt[4];
+					
+					document.getElementById('question_guj').innerHTML = dt[5];
+					document.getElementById('op1g').innerHTML = dt[6];
+					document.getElementById('op2g').innerHTML = dt[7];
+					document.getElementById('op3g').innerHTML = dt[8];
+					document.getElementById('op4g').innerHTML = dt[9];
+					
+				}
+				else{
+				    document.getElementById('error-add').innerHTML = this.responseText;
+				}
+			}
+		}
+	xhttp.open("POST", "previewquestion", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send(str);
 	
