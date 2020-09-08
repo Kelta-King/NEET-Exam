@@ -29,7 +29,7 @@
     </thead>
 <?php
 
-$query = "SELECT * FROM contacts";
+$query = "SELECT * FROM contacts WHERE solve = '0'";
 
 if($data = $conn->query($query)){
   
