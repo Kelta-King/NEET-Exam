@@ -1,3 +1,8 @@
+.kel-white{
+    color:black;
+    background-color:white;
+}
+
 .bgimg{
   background-image: url('https://keltaking.co/Exams/Images/bgpencil.png');
   min-height: 100%;
@@ -95,11 +100,11 @@ body{
     border-radius:50%;
 }
 .loader {
-  border: 16px solid #f3f3f3;
+  border: 5px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
+  border-top: 5px solid #3498db;
+  width: 30px;
+  height: 30px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
