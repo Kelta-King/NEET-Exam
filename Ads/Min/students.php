@@ -295,5 +295,4 @@ let addStudent = () => {
 	else{
 		header('Location:https://keltaking.co/Exams/Ads/Min/logout');
 	}
-
 ?>
