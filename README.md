@@ -1,10 +1,14 @@
 <h1><b>NEET-Exam</b></h1>
-<p>This repository is just for demo NEET test. Site is device friendly.<br>
-Student can register for the test by filling up the registration form of the site and give the tests when the test is live. Students will receive the notifications of registration, email verification, test is live notification and results in their email.
+<p>Hey, nice to see you :blush:. This repository is just for online demo NEET test. It is a device friendly test website.<br>
+If you like it then please star it :star: <br>
+Student can register :registered: for the test by filling up the registration form :page_facing_up: of the site and give the tests when the test is live. Students will receive the notifications of registration, email verification, test is live notification and results in their email.
   <p>
   Here is the link of the site in which the NEET demo test happened.
-  <a href='https://keltaking.co/Exams/'>NEET demo test</a>
+  <a href='https://keltaking.co/Exams/'> :link: NEET demo test</a>
 </p>
+This site reached 1432 registered students for NEET test and on 8th of Sept 2020, site reached 1657 unique users count. My friends <a href="https://github.com/AnubhavMadhav">Anubhav</a>, Ram and many more worked with me in this project.
+<br>
+Let me give you the preview of demo test.<br><br>
 <b>On going test's web page looks like this.</b>
 <br>
   <center>
@@ -43,4 +47,13 @@ Student can register for the test by filling up the registration form of the sit
   <center>
     <img src='https://github.com/Kelta-King/NEET-Exam/blob/master/Files/examInstrpage.png'>
   </center>
+  
+  <h2><b>5. Live exam page</b></h2><br>
+  As you can see in above web page, user can attend test in either Gujarati language language or English. Below is how user gives test in Gujarati<br>
+  <center>
+    <img src='https://github.com/Kelta-King/NEET-Exam/blob/master/Files/examgoingGUJ.PNG'>
+  </center>
+</p>
+<p>
+  I hope you like it. Star it :star:
 </p>
