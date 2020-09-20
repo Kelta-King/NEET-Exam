@@ -95,12 +95,16 @@ class Check{
 
 let login = () => {
 		
+		
 		let formS = document.getElementById('register');
 		
 		let check_data = new Check();
 		let error = document.getElementById('error');
 		let rollno = formS.rollno.value;
 		let pass = formS.pass.value;
+	
+	    error.innerHTML = "<span color='blue'>No one can login now. If you have given the test then we will send you your resuls on your mail.</span>";
+		return false;
 	
 		if(rollno == "" || pass == ""){
 			error.innerHTML = "Please enter every details";
