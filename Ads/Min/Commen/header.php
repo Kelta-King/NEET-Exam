@@ -49,7 +49,7 @@ function w3_close() {
 		<a href="javascript:void(0)" onclick="w3_close()" class="w3-display-topright w3-button w3-padding w3-hide-large w3-hover-white"><i class="fa fa-remove"></i></a>
 		<a href="https://keltaking.co/Exams/Ads/Min/students" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">STUDENTS<i class="fa fa-caret-right w3-right"></i></a> 
 		<a href="https://keltaking.co/Exams/Ads/Min/questions" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">QUESTIONS<i class="fa fa-caret-right w3-right"></i></a>
-		<a href="https://keltaking.co/Exams/Ads/Min/admins" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">ADMINS<i class="fa fa-caret-right w3-right"></i></a>
+		<a href="https://keltaking.co/Exams/Ads/Min/admins" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">FEEDBACKS<i class="fa fa-caret-right w3-right"></i></a>
 		<a href="https://keltaking.co/Exams/Ads/Min/contacts" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">SUPPORT<i class="fa fa-caret-right w3-right"></i></a>
 		<a href="https://keltaking.co/Exams/Ads/Min/edit" onclick="w3_close()" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white">EDIT<i class="fa fa-caret-right w3-right"></i></a> 
 		<a href="https://keltaking.co/Exams/Ads/Min/logout" class="w3-bar-item w3-button w3-margin-top kel-hover-2 w3-hover-white" onclick="w3_close()" >lOGOUT</a>
