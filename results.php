@@ -50,8 +50,7 @@
 </div>
 
 <div class="w3-content w3-text-black w3-padding-32 w3-center w3-xlarge fonts">
-    At 11 AM, 9th September, Students who gave the test will recieve their results. <br>On this page, students can see the overview of exam. Like; Highest marks and lowest marks. Average marks of students etc. Come back on this page on result declaration date.
-    
+    We will send your results in an email. You will receive the email if you have given the test.
 </div>
 
 <script src="JS/result.js"></script>
