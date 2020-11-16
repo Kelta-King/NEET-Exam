@@ -2,10 +2,7 @@
 <p>Hey, nice to see you :blush:. This repository is just for online demo NEET test. It is a device friendly test website.<br>
   <b>If you like it then please star it :star: </b><br>
 Student can register :registered: for the test by filling up the registration form :page_facing_up: of the site and give the tests when the test is live. Students will receive the notifications of registration, email verification, test is live notification and results in their email.
-  <p>
-  Here is the link of the site in which the NEET demo test happened.
-  <a href='https://keltaking.co/Exams/'> :link: NEET demo test</a>
-</p>
+
 This site reached 1432 registered students for NEET test and on 8th of Sept 2020, site reached 1657 unique users count. My friends <a href="https://github.com/AnubhavMadhav">Anubhav</a>, Ram and many more worked with me in this project.
 <br>
 Let me give you the preview of demo test.<br><br>
